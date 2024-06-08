@@ -1,4 +1,4 @@
-import { Box, Container, Text } from '@chakra-ui/react';
+import { Box, Container, Flex, Text } from '@chakra-ui/react';
 import React from 'react'
 
 type TodoLayoutType = {
@@ -10,7 +10,7 @@ export const TodoLayout = ({children}:TodoLayoutType) => {
         <Box
             h={"600px"}
             maxW={"600px"}
-            background={"#fff"}
+            background={"#1a1a1a"}
             borderRadius={"20px"}
             p={10}
         >
@@ -24,12 +24,16 @@ export const TodoLayout = ({children}:TodoLayoutType) => {
                 >
                     React+Go FullStack TODO
                 </Text>
-                <Box 
+                <Flex
+                    gap={4}
+                    direction={"column"}
                     mt={"20px"}
+                    maxH={"80%"}
+                    p={"8px"}
                     overflow={"auto"}
                 >
                     {children} 
-                </Box>
+                </Flex>
             </Container>
         </Box>
     )

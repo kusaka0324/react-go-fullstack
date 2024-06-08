@@ -1,4 +1,4 @@
-import { Center, Container } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import { TodoLayout, TodoForm, TodoList } from './components'
 
 export const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api" : "/api";

@@ -1,6 +1,6 @@
 import { Flex, Spinner, Stack, Text } from "@chakra-ui/react";
 
-import TodoItem from "./TodoItem";
+import { TodoItem } from "./TodoItem";
 import { useQuery } from "@tanstack/react-query";
 import { BASE_URL } from "../App";
 
@@ -30,17 +30,6 @@ export const TodoList = () => {
 
 	return (
 		<>
-			<Text
-				fontSize={"4xl"}
-				textTransform={"uppercase"}
-				fontWeight={"bold"}
-				textAlign={"center"}
-				my={2}
-				bgGradient='linear(to-l, #0b85f8, #00ffff)'
-				bgClip='text'
-			>
-				Today's Tasks
-			</Text>
 			{isLoading && (
 				<Flex justifyContent={"center"} my={4}>
 					<Spinner size={"xl"} />
